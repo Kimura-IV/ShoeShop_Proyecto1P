@@ -1,0 +1,33 @@
+.sidenav-container {
+  height: 100vh;
+  margin: 10px 0 10px 0;
+}
+
+.mat-sidenav-fixed {
+  position: absolute;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1200px) {
+  .sidenav-container{
+    margin-right: 17%;
+    margin-left: 17%;
+  }
+
+  .mat-nav-list :hover{
+    background-color: lightgray;
+  }
+}

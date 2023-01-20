@@ -1,0 +1,30 @@
+.catalogo-container {
+  height: 100vh;
+  background: #eee;
+  margin: 10px 0 10px 0;
+}
+
+.sidenav {
+  width: 25%;
+}
+
+mat-action-list {
+  margin-top: 20px;
+}
+
+.mat-form-field {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+input {
+  border-radius: 20px black !important;
+}
+
+.content{
+  padding: 10px;
+}
+
+app-libro{
+  margin-bottom: 20px;
+}

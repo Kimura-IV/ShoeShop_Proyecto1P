@@ -1,0 +1,58 @@
+<!-- #region Slider -->
+<div id="carouselExampleControls" class="carousel slide carousel-fade container-xl mt-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../../assets/img/slide1.png" class="d-block w-100" data-bs-interval="10000" alt="noticia" />
+    </div>
+    <div class="carousel-item">
+      <img src="../../../assets/img/slide2.png" class="d-block w-100" data-bs-interval="10000" alt="noticia" />
+    </div>
+    <div class="carousel-item">
+      <img src="../../../assets/img/slide3.png" class="d-block w-100" data-bs-interval="10000" alt="noticia" />
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- #endregion -->
+
+<!-- #region Novedades Y Noticias-->
+<div class="container-xl mt-5">
+  <div class="row">
+    <!-- #region Novedades -->
+    <h1>NOVEDADES</h1>
+    <div class="col col-ms-2">
+      <div class="row row-cols-1 row-cols-sm-4 ms-3 me-3">
+        <app-zapato class="col" [InputZapato]="zapato" *ngFor="let zapato of filtrarCategoria(listzapato, listCategorias, 0)">
+          {{zapato}}</app-zapato>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region News highlight -->
+    <div class="col-11 col-md-4 ms-3">
+      <h1>Noticias destacadas</h1>
+
+      <div id="listNewsHighlight" class="card mb-3" style="max-width: 440px" *ngFor="let item of listNewsHighlight2 | slice:0:6" (click)="openArticle(item)">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="{{item.img}}" class="img-fluid rounded-start" alt="autora" />
+          </div>
+          <div class="col-md-7 mr-2 modal-dialog-centered">
+            <p class="card-text">
+              {{item.title}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- #endregion -->
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<h1 mat-dialog-title>Agregar ZApato <h1>
+<div mat-dialog-content>
+    <form [formGroup]="zapatoForm" (ngSubmit)="agregarzapato()">
+        <div class="row">
+            <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill" style="width: 100px">
+                    <mat-label>ID</mat-label>
+                    <input formControlName="id_zapato" type="number" matInput #id_zapato />
+                </mat-form-field>
+                <br />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>marca</mat-label>
+                    <input matInput formControlName="marca" type="text" placeholder="Inserte la marca" #marca />
+                </mat-form-field>
+                <br />
+
+                <mat-form-field class="example-full-width" appearance="fill" style="width: 500px">
+                    <mat-label>Descripción</mat-label>
+                    <textarea matInput formControlName="descripcion" type="text" placeholder="Inserte la descripción"
+                        rows="8" cols="40" #descripcion></textarea>
+                </mat-form-field>
+                <br />
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Categoria</mat-label>
+                    <mat-select formControlName="id_categoria">
+                        <mat-option *ngFor="let categoria of listCategorias" [value]="categoria.nombre_categoria">
+                            {{ categoria.nombre_categoria }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br />
+
+                <br />
+            </div>
+            <div class="col">
+                <br />
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>modelo</mat-label>
+                    <input formControlName="modelo" matInput placeholder="Inserte el modelo" #modelo />
+                </mat-form-field>
+                <br />
+
+                <div class="row">
+                    <br />
+                    <mat-form-field class="example-full-width" appearance="fill" style="width: 200px">
+                        <mat-label>Precio</mat-label>
+                        <input formControlName="precio" type="number" matInput placeholder="Inserte el precio"
+                            #precio />
+                    </mat-form-field>
+                    <br />
+                </div>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Fecha de lanzamiento</mat-label>
+                    <input formControlName="fecha_lanzamiento" type="date" matInput
+                        placeholder="Inserte la fecha de lanzamiento" #fecha_lanzamiento />
+                </mat-form-field>
+                <br />
+            </div>
+        </div>
+
+        <div class="divBtnModificar">
+            <button type="submit" [disabled]="zapatoForm.invalid" mat-raised-button color="primary">
+                {{ actionBtn }}
+            </button>
+            <button type="reset" style="margin-left: 8px" mat-raised-button color="warn" (click)="closeDialog()">
+                Cancelar
+            </button>
+        </div>
+    </form>
+</div>

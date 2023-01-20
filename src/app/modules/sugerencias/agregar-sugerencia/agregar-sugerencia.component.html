@@ -1,0 +1,34 @@
+<div class="container-form">
+    <mat-card>
+        <form [formGroup]="ingresarSugerencia" (ngSubmit)="onSubmit()">
+            <h2 class="subtitulos-form">Detalles del Producto</h2>
+            <mat-form-field class="campos-field">
+                <input matInput placeholder="Marca" formControlName="marca">
+            </mat-form-field>
+
+            <mat-form-field class="campos-field">
+                <input matInput placeholder="Modelo" formControlName="modelo">
+            </mat-form-field>
+
+            <mat-form-field class="campos-field ">
+                <input matInput placeholder="Descripción" formControlName="descripcion">
+            </mat-form-field>
+            <mat-form-field class="campos-field ">
+                <mat-label>Fecha de Lanzamiento </mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="fechalanzamiento">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <h2 class="subtitulos-form">Razones de recomendación</h2>
+            <mat-form-field class="campos-field">
+                <textarea matInput placeholder="Razones de recomendación" formControlName="razones"></textarea>
+            </mat-form-field>
+            <button mat-raised-button [disabled] = "!ingresarSugerencia.valid" (click)="onSubmit()">Enviar</button>
+          <div *ngIf="isRegistered" class="alert alert-primary" role="alert">
+            ¡Has enviado enviado la sugerencia correctamente!
+          </div>
+        </form>
+    </mat-card>
+
+</div>

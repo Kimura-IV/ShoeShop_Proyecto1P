@@ -1,0 +1,40 @@
+<div>
+  <div class="row justify-content-md-center">
+    <div class="col-lg-3">
+      <div class="container color img">
+        <img src="../../../../assets/img/books/{{InputZapato.imagen}}" alt="{{InputZapato.titulo}}" height="450"
+          width="250">
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="container principal">
+        <h1>{{InputZapato.marca}}</h1>
+        <p>{{InputZapato.modelo}}</p>
+        <h2>${{InputZapato.precio.toFixed(2)}}</h2>
+        <button mat-flat-button color="primary">
+          <mat-icon>add_shopping_cart</mat-icon>Agregar al carrito
+        </button>
+      </div>
+      <div class="container descrip">
+        <h2>Descripción</h2>
+        <p>{{InputZapato.descripcion}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-lg-3">
+      <div class="container color">
+        <h2>Detalles</h2>
+        <p>
+          Fecha de lanzamiento: {{format(InputZapato.fecha_lanzamiento)}}<br>
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="container color">
+        <h2>Categorías</h2>
+        <button class="button">{{mostrarCategoria(InputZapato.id_categoria)}}</button>
+      </div>
+    </div>
+  </div>
+</div>

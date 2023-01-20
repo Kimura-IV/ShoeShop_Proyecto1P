@@ -1,0 +1,16 @@
+<mat-card class="card-libro" (click)="openDetalle(InputZapato)">
+    <img mat-card-image src="../../assets/img/shoes/{{InputZapato.imagen}}" alt="{{InputZapato.marca}}"
+        class="card-img-top" />
+    <mat-card-header>
+        <mat-card-title>{{InputZapato.marca}}</mat-card-title>
+        <mat-card-subtitle>{{InputZapato.modelo}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+        <div style="font-size: 20px; font-weight: bold; text-align: center">
+            ${{InputZapato.precio.toFixed(2)}}
+            <button mat-button class="col-sm cart-comprar">
+                <i class="bi bi-cart-fill" style="font-size: 1.5rem"></i>
+            </button>
+        </div>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,29 @@
+img {
+    height: 280px;
+    background-size: cover;
+  }
+  
+  .card-libro {
+    cursor: pointer;
+    transition: all 400ms ease;
+    font-family: var(--ff-fredoka);
+    max-width: 400px;
+    max-height: 500px;
+    height: 100%;
+  }
+  
+  .card-libro:hover {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0.2);
+  }
+  
+  mat-card-actions {
+    translate: all 200ms ease;
+  }
+  
+  mat-card-actions:hover {
+    color: green;
+  }
+  
+  .cart-comprar {
+    color: var(--sc-7);
+  }

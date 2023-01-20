@@ -1,0 +1,32 @@
+.campos-field {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 20%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+
+.forgot-password {
+  font-family: var(--ff-fresca);
+  font-size: var(--fs-p);
+  color: var(--pc-amparo-blue);
+}
+
+.register-link{
+  text-align: center;
+  font-family: var(--ff-fresca);
+  font-size: var(--fs-h5);
+  color: var(--pc-amparo-blue);
+}
+
