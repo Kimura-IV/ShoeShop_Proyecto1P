@@ -1,4 +1,4 @@
-# SOFSMA71DAWAProjectBookishBookshop
+# Proyecto del Primer Parcial - ShoeShop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
